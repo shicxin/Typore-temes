@@ -4,6 +4,7 @@
   --block-background-color: #f6f8fa;
   --marker-color: #a2b6d4;
   --control-text-hover-color: #a2b6d4;
+  --title-count: 1;  /* 定义全局计数器名称 */
 }
 
 /*
@@ -129,6 +130,7 @@ mark {
 #write h4 { font-size: 1.2rem; }
 #write h5 { font-size: 1.1rem; }
 #write h6 { font-size: 1.1rem; }
+
 
 /*
  * List
