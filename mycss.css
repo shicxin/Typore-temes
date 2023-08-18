@@ -1,15 +1,15 @@
 :root {
     --text-color: rgb(58, 71, 73);
-    --primary-color: #4870ac;
+    --primary-color: #193a6c;
     --primary-color1: #ff906582;
     --primary-color2: #48ac55;
     --primary-color3: #a448ac;
     --primary-color4: #ac4848;
     --primary-color5: #6e8061;
     --primary-color6: #46467e;
-    --block-background-color: #f6f8fa;
-    --marker-color: #a2b6d4;
-    --control-text-hover-color: #a2b6d4;
+    --block-background-color: #b0d9f9d3;
+    --marker-color: #76aac8;
+    --control-text-hover-color: #8a8cbe;
     --title-count: 1;  /* 定义全局计数器名称 */
   }
   
@@ -291,7 +291,7 @@
 
 .md-toc-h1 {
   /* 设置一级标题的缩进、粗细等 */
-  background-color: #cdb1b1;
+  background-color: #fb545467;
   margin-left: 0px;
   font-weight: bold;
 }
