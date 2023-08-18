@@ -1,4 +1,4 @@
-The built-in CSS will be replaced after update / reinstall, DO NOT MODIFY THEM.
+# 说明文档
 
-Refer https://support.typora.io/Add-Custom-CSS/ when you want to modify those CSS.
-Refer https://support.typora.io/About-Themes/ if you want to create / install new themes. 
+自用主题，上传仓库仅为共享方便。
+

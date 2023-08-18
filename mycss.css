@@ -1,10 +1,12 @@
 :root {
     --text-color: rgb(58, 71, 73);
     --primary-color: #4870ac;
-    --primary-color1: #ffe02ec5;
+    --primary-color1: #ff906582;
     --primary-color2: #48ac55;
     --primary-color3: #a448ac;
     --primary-color4: #ac4848;
+    --primary-color5: #6e8061;
+    --primary-color6: #46467e;
     --block-background-color: #f6f8fa;
     --marker-color: #a2b6d4;
     --control-text-hover-color: #a2b6d4;
@@ -116,7 +118,7 @@
   
   #write h1 {
     font-weight: bold;
-    background: var(--primary-color4);
+    background: var(--primary-color1);
     color: #ffffff;
     padding: 1px 15px 1px;
     border-radius: 4px;
@@ -127,7 +129,7 @@
   #write h2 span {
     display: inline-block;
     font-weight: bold;
-    background: var(--primary-color3);
+    background: var(--primary-color2);
     color: #ffffff;
     padding: 1px 15px 1px;
     border-radius: 4px;
@@ -136,7 +138,7 @@
     #write h3 span {
     display: inline-block;
     font-weight: bold;
-    background: var(--primary-color2);
+    background: var(--primary-color3);
     color: #ffffff;
     padding: 1px 15px 1px;
     border-radius: 4px;
@@ -145,7 +147,7 @@
    #write h4 span {
     display: inline-block;
     font-weight: bold;
-    background: var(--primary-color);
+    background: var(--primary-color4);
     color: #ffffff;
     padding: 1px 15px 1px;
     border-radius: 4px;
@@ -154,22 +156,31 @@
    #write h5 span {
     display: inline-block;
     font-weight: bold;
-    background: var(--primary-color1);
-    color: #3d0a0a;
+    background: var(--primary-color5);
+    color: #eded8f;
     padding: 1px 15px 1px;
+    border-radius: 4px;
+    margin-right: 3px;
+   }
+   #write h6 span {
+    display: inline-block;
+    font-weight: bold;
+    background: var(--primary-color6);
+    color: #f8efd7;
+    padding: 1px 10px 1px;
     border-radius: 4px;
     margin-right: 3px;
    }
   
   #write h1 { font-size: 2rem; }
   #write h2 { font-size: 1.5rem; }
-  #write h3 { font-size: 1.4rem; }
-  #write h4 { font-size: 1.2rem; }
-  #write h5 { font-size: 1.1rem; }
+  #write h3 { font-size: 1.5rem; }
+  #write h4 { font-size: 1.3rem; }
+  #write h5 { font-size: 1.2rem; }
   #write h6 { font-size: 1.1rem; }
-  /* ------------------------------------------------------------------ */
-  
-  
+
+
+  /* **************************设置标题编号与颜色************************ */
   
   /** initialize css counter */
   #write {
@@ -196,41 +207,46 @@
     counter-reset: h6
   }
   
+  h6 {
+    counter-reset: h7
+  }
+  
   /** put counter result into headings */
   #write h1:before {
     counter-increment: h1;
-    content: counter(h1) ". "
+    content: "第 " counter(h1) " 段  "
   }
   
   #write h2:before {
     counter-increment: h2;
-    content: counter(h1) "." counter(h2) ". "
+    content: counter(h1) "." counter(h2) "  "
   }
   
   #write h3:before,
   h3.md-focus.md-heading:before /** override the default style for focused headings */ {
     counter-increment: h3;
-    content: counter(h1) "." counter(h2) "." counter(h3) ". "
+    content: counter(h1) "." counter(h2) "." counter(h3) "  "
   }
   
   #write h4:before,
   h4.md-focus.md-heading:before {
     counter-increment: h4;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". "
+    content: "(" counter(h4) ")  "
   }
   
   #write h5:before,
   h5.md-focus.md-heading:before {
     counter-increment: h5;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "
+    content: "(" counter(h4) ") - " counter(h5) "  "
   }
-  
+
   #write h6:before,
   h6.md-focus.md-heading:before {
     counter-increment: h6;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
+    content: "(" counter(h4) ") / " counter(h5) " - " counter(h6) "  "
   }
-  
+
+
   /** override the default style for focused headings */
   #write>h3.md-focus:before,
   #write>h4.md-focus:before,
@@ -256,8 +272,63 @@
   }
   
   
-  /* ------------------------------------------------------------------ */
+  /**************************** END ************************************/
   
+
+  /**************************** 设置目录样式 *****************************/
+.md-toc {
+  /* 设置目录整体的字体、颜色、大小等 */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #06443e;
+  font-size: 14px;
+}
+
+.md-toc-content {
+  /* 设置目录内容的边距、对齐等 */
+  margin-left: 20px;
+  text-align: left;
+}
+
+.md-toc-h1 {
+  /* 设置一级标题的缩进、粗细等 */
+  background-color: #cdb1b1;
+  margin-left: 0px;
+  font-weight: bold;
+}
+
+.md-toc-h2 {
+  /* 设置二级标题的缩进、粗细等 */
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+.md-toc-h3 {
+  /* 设置三级标题的缩进、粗细等 */
+  margin-left: 40px;
+  font-weight: normal;
+}
+
+.md-toc-h4 {
+  /* 设置四级标题的缩进、粗细等 */
+  margin-left: 60px;
+  font-weight: normal;
+}
+
+.md-toc-h5 {
+  /* 设置五级标题的缩进、粗细等 */
+  margin-left: 80px;
+  font-weight: normal;
+}
+
+.md-toc-h6 {
+  /* 设置六级标题的缩进、粗细等 */
+  margin-left: 100px;
+  font-weight: normal;
+}
+
+/* 可以根据需要继续设置更多层级的标题样式 */
+
+/**************************** END *****************************/
   
   /*
    * List
