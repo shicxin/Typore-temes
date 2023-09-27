@@ -3,13 +3,13 @@
     --primary-color: #ad2f2f;
     --primary-color1: #768f72;
     --primary-color2: #33793c;
-    --primary-color3: #733479;
+    --primary-color3: #7fc39a;
     --primary-color4: #7c3232;
     --primary-color5: #4a6437;
     --primary-color6: #1e2958;
-    --block-background-color: #b4b9f7d3;
-    --marker-color: #76aac8;
-    --control-text-hover-color: #8a8cbe;
+    --block-background-color: #c2dbb1;
+    --marker-color: #6e93a9;
+    --control-text-hover-color: #c2c3e3;
     --title-count: 1;  /* 定义全局计数器名称 */
   }
   
@@ -684,7 +684,7 @@
   .cm-s-inner .cm-tag,
   .cm-s-inner .cm-property,
   .cm-s-inner .cm-quote {
-    color: #b9218e !important;
+    color: #b2368f !important;
   }
   
   .cm-s-inner .cm-variable-2 {
@@ -704,7 +704,7 @@
     color: #0744ac !important;
   }
   .cm-s-inner .cm-string {
-    color: #6f42c2 !important;
+    color: #b39cde !important;
   }
   .cm-s-inner .cm-string-2 {
     color: #27638f !important;
@@ -717,7 +717,7 @@
     color: #0b93be !important;
   }
   .cm-s-inner .cm-attribute {
-    color: #8f6aa8 !important;
+    color: #a7a86a !important;
   }
   
   .cm-s-inner .cm-error {
