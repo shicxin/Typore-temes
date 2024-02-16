@@ -11,7 +11,16 @@
     --marker-color: #6e93a9;
     --control-text-hover-color: #c2c3e3;
     --title-count: 1;  /* 定义全局计数器名称 */
+    /* 开始配置mermaid主题 */
+    /* 序列编号 */
+    --mermaid-sequence-numbers: on;
+    /* 使用手写体 */
+    --sequence-theme: hand;
+    /* 设计线条 */
+    --mermaid-flowchart-curve: natural;
+    
   }
+  
   
   /*
    * Font-face for Cantarell, Source Han Serif CN and JetBrains Mono
